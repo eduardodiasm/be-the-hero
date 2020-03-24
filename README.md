@@ -16,13 +16,15 @@
 ## Install
 
 ```sh
+cd backend
 npm install
 ```
 
-## Run tests
+## Run
 
 ```sh
-npm run test
+cd backend
+npm start
 ```
 
 ## Author
