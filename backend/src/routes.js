@@ -7,9 +7,14 @@ const incidentController = require('./controllers/incidentesController')
 // Route params: used to identify something.
 // Request body: used to create or modify something.
 
+// NGO's routes.
 routes.get('/ngos', ngoController.index)
 routes.post('/ngos', ngoController.create)
 
+// Incidents routes.
+routes.get('/incidents', incidentController.index)
 routes.post('/incidents', incidentController.create)
+routes.delete('/incidents/:id', incidentController.delete)
+
 
 module.exports = routes
