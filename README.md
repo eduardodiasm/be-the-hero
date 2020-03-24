@@ -16,15 +16,15 @@
 ## Install
 
 ```sh
-cd backend
-npm install
+$ cd backend
+$ npm install
 ```
 
 ## Run
 
 ```sh
-cd backend
-npm start
+$ cd backend
+$ npm start
 ```
 
 ## Author
