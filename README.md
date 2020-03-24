@@ -2,7 +2,7 @@
   <img alt="Be The Hero" src="./promotional/logo.png"/>
 </h2>
 
-<h1 align="center">Welcome to Be The Heroo 👋</h1>
+<h1 align="center">Welcome to Be The Hero 👋</h1>
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
