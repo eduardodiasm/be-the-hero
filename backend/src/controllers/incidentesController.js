@@ -8,9 +8,11 @@ module.exports = {
         const [count] = await connection('incidents').count()
 
         const incidents = await connection('incidents')
+        .join('ngos', 'ngos.id', '=', 'incidents.ngo_id')
         .limit(5)
         .offset((page - 1) * 5)
-        .select('*')
+        .select(['incidents.*', 'ngos.name', 'ngos.email', 
+        'ngos.whatsapp', 'ngos.city', 'ngos.state'])
         
         res.header('X-Total-Count', count['count(*)'])
 
