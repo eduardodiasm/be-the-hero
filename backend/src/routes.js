@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const sessionController = require('./controllers/sessionController')
 const ngoController = require('./controllers/ngosController')
 const profileController = require('./controllers/profileController')
 const incidentController = require('./controllers/incidentesController')
@@ -7,6 +8,9 @@ const incidentController = require('./controllers/incidentesController')
 // Query params: used to filter something.
 // Route params: used to identify something.
 // Request body: used to create or modify something.
+
+// Sessions
+routes.post('/sessions', sessionController.create)
 
 // NGO's routes.
 routes.get('/ngos', ngoController.index)

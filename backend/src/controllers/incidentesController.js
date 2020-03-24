@@ -3,7 +3,13 @@ const connection = require('../database/connection')
 module.exports = {
 
     async index(req, res) {
-        const incidents = await connection('incidents').select('*')
+        const { page = 1} = req.query
+        
+        const incidents = await connection('incidents')
+        .limit(5)
+        .offset((page - 1) * 5)
+        .select('*')
+
         return res.json(incidents)
     },
 
