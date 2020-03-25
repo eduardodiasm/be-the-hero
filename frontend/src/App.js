@@ -1,8 +1,9 @@
 import React from 'react';
+import Logon from './pages/Logon/index'
 
 function App() {
   return (
-    <h1>Hello, world!</h1>
+    <Logon />
   );
 }
 
