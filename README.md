@@ -2,8 +2,6 @@
   <img alt="Be The Hero" src="./promotional/logo.png"/>
 </h2>
 
-<h1 align="center">Welcome to Be The Hero 👋</h1>
-
 ## What is it?
 > This is a platform to people discover and help NOG's (Non-governmental organizations).
 
