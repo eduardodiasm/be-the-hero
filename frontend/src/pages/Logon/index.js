@@ -14,12 +14,15 @@ export default function Logon() {
 
                 <form action="">
                     <h1>Logon here!</h1>
+
                     <input type="text" placeholder="Your ID"/>
-                    <button type="submit">Logon</button>
+                    <button type="submit" className="button">Logon</button>
+
                     <a href="/register">
                         <FiLogIn size={16} color="#E02041"/>
                         I don't have a registration
                     </a>
+
                 </form>
 
             </section>
