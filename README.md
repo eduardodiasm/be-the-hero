@@ -13,19 +13,26 @@
 
 > Platform to people discover and help NOG's (Non-governmental organizations).
 
-## Install
+## :computer: Technologies:
+* NodeJS
+* SQL
+* React
+* React Native
+## Installing the backend
 
 ```sh
 $ cd backend
 $ npm install
 ```
 
-## Run
+## Running the backend
 
 ```sh
 $ cd backend
 $ npm start
 ```
+
+## To know how to run the frontend, [click here](https://github.com/EduardoDias-M/Be-The-Hero/blob/master/frontend/README.md)
 
 ## Author
 
