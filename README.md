@@ -18,7 +18,7 @@
 * SQL
 * React
 * React Native
-## Installing the backend
+## Installing the backend modules
 
 ```sh
 $ cd backend
