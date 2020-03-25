@@ -18,21 +18,23 @@
 * SQL
 * React
 * React Native
-## Installing the backend modules
+## Instructions:
+
+### Installing the backend modules
 
 ```sh
 $ cd backend
 $ npm install
 ```
 
-## Running the backend
+### Running the backend
 
 ```sh
 $ cd backend
 $ npm start
 ```
 
-## To know how to run the frontend, [click here](https://github.com/EduardoDias-M/Be-The-Hero/blob/master/frontend/README.md)
+### To know how to run the frontend, [click here](https://github.com/EduardoDias-M/Be-The-Hero/blob/master/frontend/README.md)
 
 ## Author
 
