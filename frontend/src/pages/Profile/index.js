@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 
 import api from '../../services/api'
@@ -15,13 +15,15 @@ export default function Profile() {
     const ngoId = localStorage.getItem('ngoId')
     const ngoName = localStorage.getItem('ngoName')
 
+    const history = useHistory()
+
     useEffect(() => {
         api.get('profile', {
             headers: {
                 Authorization: ngoId,
             }
-        }).then(response => {
-            setIncidents(response.data)
+        }).then(Response => {
+            setIncidents(Response.data)
         })
     }, [ngoId])
 
@@ -34,11 +36,17 @@ export default function Profile() {
                     Authorization: ngoId,
                 }
             })
+        
+            setIncidents(incidents.filter(incident => incident.id !== id))
 
         } catch {
             alert('Error while deleting, try again.')
         }
+    }
 
+    function handleLogout() {
+        localStorage.clear()
+        history.push('/')
     }
 
     return(
@@ -49,7 +57,7 @@ export default function Profile() {
     <span>Welcome, {ngoName}!</span>
                 
                 <Link className="button" to="/incidents/new">Add an incident</Link>
-                <button type="button">
+                <button type="button" onClick={handleLogout}>
                     <FiPower size={18} color="#E02041"/>
                 </button>
             </header>

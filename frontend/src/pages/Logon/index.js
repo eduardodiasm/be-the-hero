@@ -19,9 +19,12 @@ export default function Logon() {
         try{
 
             const response = await api.post('sessions', { id })
+
             localStorage.setItem('ngoId', id)
             localStorage.setItem('ngoName', response.data.name)
+
             history.push('/profile')
+            
        } catch(error) {
             alert('Login failed, try again')
        }
