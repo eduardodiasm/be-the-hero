@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {FiArrowLeft} from 'react-icons/fi'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 
 import api from '../../services/api'
 
@@ -16,6 +16,8 @@ export default function Register(){
     const [city, setCity] = useState('')
     const [state, setState] = useState('')
 
+    const history = useHistory()
+
     async function handleRegister(e) {
         e.preventDefault()
         const data = {
@@ -28,6 +30,7 @@ export default function Register(){
         try {
             const response = await api.post('ngos', data)
             alert(`Your ID: ${response.data.id}`)
+            history.push('/')
         } catch(err) {
             alert('Register error')
         }
