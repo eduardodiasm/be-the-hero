@@ -22,8 +22,8 @@ export default function Profile() {
             headers: {
                 Authorization: ngoId,
             }
-        }).then(Response => {
-            setIncidents(Response.data)
+        }).then(response => {
+            setIncidents(response.data)
         })
     }, [ngoId])
 

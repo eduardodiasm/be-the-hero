@@ -7,8 +7,9 @@ import './style.css'
 
 import api from '../../services/api'
 
-function NewIncident() {
+export default function NewIncident(e) {
 
+    
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [value, setValue] = useState('') 
@@ -17,8 +18,8 @@ function NewIncident() {
         
     const ngoId = localStorage.getItem('ngoId')
 
-    async function handleNewIncident() {
-
+    async function handleNewIncident(e) {
+       e.preventDefault()
         const data = {
             title, 
             description,
@@ -32,15 +33,16 @@ function NewIncident() {
                 }
             })
             history.push('/profile')
-        }
-        catch(err){
-            console.log('Erro ao cadastrar caso ' + err)
+
+        } catch(error) {
+            console.log('Error ' + error)
         }
     }
     
     return(
         <div className="new-incident-container">
             <div className="content">
+
                 <section>
                     <img src={logoImg} alt='Be the Hero' />
 
@@ -54,23 +56,26 @@ function NewIncident() {
 
 
                 </section> 
+
                 <form onSubmit= {handleNewIncident}>
                     <input 
                         placeholder="Title"
                         value={title}
                         onChange = {e => setTitle(e.target.value)}
+                        required
                     />
                     <textarea 
                         placeholder="Description"
                         value={description}
                         onChange={e => setDescription(e.target.value)} 
-                    
+                        required
                     />
 
                     <input 
                         placeholder="Value"
                         value={value}
                         onChange = {e => setValue(e.target.value)}
+                        required
                     />
 
                     <button className="button" type="submit"> Register </button>
@@ -80,5 +85,3 @@ function NewIncident() {
         </div>
     )
 }
-
-export default NewIncident
