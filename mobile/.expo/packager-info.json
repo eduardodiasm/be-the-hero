@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 5044,
-  "expoServerNgrokUrl": "https://eh-ygf.anonymous.mobile.exp.direct",
-  "packagerNgrokUrl": "https://packager.eh-ygf.anonymous.mobile.exp.direct",
-  "ngrokPid": 12568
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
