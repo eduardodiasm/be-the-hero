@@ -14,7 +14,7 @@ module.exports = {
         .select(['incidents.*', 'ngos.name', 'ngos.email', 
         'ngos.whatsapp', 'ngos.city', 'ngos.state'])
         
-        res.header('X-Total-Count', count['count(*)'])
+        res.header('X-Total-Count', count['count(*)'] - 2)
 
         return res.json(incidents)
     },
