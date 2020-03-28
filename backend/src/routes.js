@@ -28,7 +28,11 @@ routes.post('/ngos', celebrate({
 }) ,ngoController.create)
 
 // NGO profile.
-routes.get('/profile', profileController.index)
+routes.get('/profile', celebrate({
+    [Segments.HEADERS]: Joi.object().keys({
+        authorization: Joi.string().required()
+    })
+}), profileController.index)
 
 // Incidents routes.
 routes.get('/incidents', incidentController.index)
