@@ -17,6 +17,7 @@ routes.post('/sessions', sessionController.create)
 
 // NGO's routes.
 routes.get('/ngos', ngoController.index)
+
 routes.post('/ngos', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
@@ -40,6 +41,7 @@ routes.get('/incidents', celebrate({
         page: Joi.number(),
     })
 }),incidentController.index)
+
 routes.post('/incidents', incidentController.create)
 
 routes.delete('/incidents/:id', celebrate({
