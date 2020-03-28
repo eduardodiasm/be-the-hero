@@ -62,7 +62,7 @@ export default function Details() {
 
             <View style={styles.contactBox}>
                 <Text style={styles.heroTitle}>Save the day!</Text>
-                <Text style={styles.heroTitle}>Be the hero behind of this incident!</Text>
+                <Text style={styles.heroTitle}>Be the hero behind this incident!</Text>
 
                 <Text style={styles.heroDescription}>Get in touch!</Text>
 
