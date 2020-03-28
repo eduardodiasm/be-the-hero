@@ -5,6 +5,7 @@ const connection = require('../../src/database/connection')
 describe('NGO', () => {
 
     beforeEach(async () => {
+        await connection.migrate.rollback()
         await connection.migrate.latest()
     })
 
