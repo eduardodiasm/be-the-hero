@@ -31,7 +31,7 @@ routes.post('/ngos', celebrate({
 routes.get('/profile', celebrate({
     [Segments.HEADERS]: Joi.object().keys({
         authorization: Joi.string().required()
-    })
+    }).unknown(),
 }), profileController.index)
 
 // Incidents routes.
