@@ -22,7 +22,7 @@ routes.post('/ngos', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
-        whatsapp: Joi.number().required().min(11).max(14),
+        whatsapp: Joi.string().required().min(11).max(14),
         city: Joi.string().required(),
         state: Joi.string().required().length(2),
     })
