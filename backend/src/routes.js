@@ -35,7 +35,11 @@ routes.get('/profile', celebrate({
 }), profileController.index)
 
 // Incidents routes.
-routes.get('/incidents', incidentController.index)
+routes.get('/incidents', celebrate({
+    [Segments.QUERY]: Joi.object().keys({
+        page: Joi.number(),
+    })
+}),incidentController.index)
 routes.post('/incidents', incidentController.create)
 
 routes.delete('/incidents/:id', celebrate({
