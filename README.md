@@ -3,7 +3,7 @@
 </h2>
 
 ## What is it?
-> This is a platform to people discover and help NOG's (Non-governmental organizations).
+> This is a platform to people discover and help NGO's (Non-governmental organizations).
 
 ## :computer: Technologies:
 * NodeJS
@@ -32,7 +32,7 @@ $ npm start
 
 👤 **Eduardo Dias**
 
-* Github: [@EduardoDias-M](https://github.com/EduardoDias-M)
+* Github: [@eduardodiasm](https://github.com/eduardodiasm)
 * LinkedIn: [@Eduardo Dias](https://www.linkedin.com/in/eduardo-dias-680903152/)
 
 ## Show your support
